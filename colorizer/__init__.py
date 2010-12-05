@@ -39,8 +39,14 @@ def main():
         sys.stderr.write('Num arguments should not be more than %s.\n' % len(COLORS))
         sys.exit(1)
 
-    for line in sys.stdin.xreadlines():
-        sys.stdout.write(process(line))
+    try:
+        for line in sys.stdin.xreadlines():
+            sys.stdout.write(process(line))
+    except IOError:
+        # Ignore it because this error probably
+        # Because someone interrupted us ising "head" utility
+        pass
+
 
 if __name__ == '__main__':
     main()
