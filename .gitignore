@@ -3,3 +3,5 @@
 .*.swo
 *.egg-info
 dist
+env
+pip-log.txt

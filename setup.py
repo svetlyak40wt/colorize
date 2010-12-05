@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = 'colorizer',
-    version = '0.1.0',
+    version = '0.1.1',
     description = 'Console colorizer, which acts like grep but paint each match in it\'s own color.',
     author = 'Alexander Artemenko',
     author_email = 'svetlyak.40wt@gmail.com',
@@ -17,5 +17,8 @@ setup(
         'Intended Audience :: System Administrators',
         'Programming Language :: Python',
     ],
-    scripts = ['colorize'],
+    entry_points = """
+    [console_scripts]
+    colorize = colorize:main
+    """,
 )

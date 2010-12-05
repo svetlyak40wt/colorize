@@ -30,8 +30,7 @@ def process(line):
     return line
 
 
-
-if __name__ == '__main__':
+def main():
     if len(sys.argv) == 1:
         sys.stderr.write("Usage: tail -f some.log | %s 'one.*pattern' 'another'\n" % sys.argv[0])
         sys.exit(1)
@@ -42,3 +41,6 @@ if __name__ == '__main__':
 
     for line in sys.stdin.xreadlines():
         sys.stdout.write(process(line))
+
+if __name__ == '__main__':
+    main()
