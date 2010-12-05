@@ -1,8 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name = 'colorizer',
-    version = '0.1.2',
+    version = '0.1.3',
     description = 'Console colorizer, which acts like grep but paint each match in it\'s own color.',
     author = 'Alexander Artemenko',
     author_email = 'svetlyak.40wt@gmail.com',
@@ -17,6 +17,7 @@ setup(
         'Intended Audience :: System Administrators',
         'Programming Language :: Python',
     ],
+    packages = find_packages(),
     entry_points = """
     [console_scripts]
     colorize = colorizer:main
