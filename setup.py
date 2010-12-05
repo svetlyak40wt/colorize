@@ -16,7 +16,6 @@ setup(
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'Programming Language :: Python',
-        'License :: OSI Approved :: New BSD License',
     ],
     scripts = ['colorize'],
 )
