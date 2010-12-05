@@ -5,3 +5,7 @@
 dist
 env
 pip-log.txt
+.installed.cfg
+bin/
+*.pyc
+develop-eggs/
