@@ -12,7 +12,8 @@ from termcolor import colored, COLORS
 from itertools import starmap
 
 
-COLORS = sorted([c for c in COLORS.keys() if c != 'grey'])
+COLORS = sorted([c for c in COLORS.keys() if c not in ('grey', 'white')])
+COLORS = zip(COLORS, [[]] * len(COLORS)) + zip(COLORS, [['reverse']] * len(COLORS))
 
 class Colorer:
     def __init__(self, regex, color):
@@ -20,7 +21,7 @@ class Colorer:
         self.color = color
 
     def __call__(self, line):
-        return self.regex.sub(lambda x: colored(x.group(0), self.color), line)
+        return self.regex.sub(lambda x: colored(x.group(0), self.color[0], attrs = self.color[1]), line)
 
 COLORERS = list(starmap(Colorer, zip(sys.argv[1:], COLORS)))
 
