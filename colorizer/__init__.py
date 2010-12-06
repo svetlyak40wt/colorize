@@ -43,9 +43,10 @@ def main():
     try:
         for line in sys.stdin.xreadlines():
             sys.stdout.write(process(line))
-    except IOError:
+    except (IOError, KeyboardInterrupt):
         # Ignore it because this error probably
-        # Because someone interrupted us ising "head" utility
+        # Because someone interrupted us using "head" utility
+        # or by hitting Ctrl+C
         pass
 
 
