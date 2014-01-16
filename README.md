@@ -14,3 +14,7 @@ That is it!
 Also, colorizer understands Python regexps:
 
     my-program | colorize '(ERROR|CRITICAL)' WARNING '(INFO|DEBUG)'
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/svetlyak40wt/colorize/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
